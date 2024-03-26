@@ -47,13 +47,84 @@
         </div>
         <nav class="header-menu">
             <ul class="menu-items">
-                <li><a href="#" onmouseover="myFunction()" class="menu-link menu-categories">Todas as Categorias</a>
+                <li class="dropdown-categories"><a href="#" class="menu-link ">Todas as Categorias</a>
+                    <nav>
+                        <div class="dropdown-content content-categories">
+                            <a href="#">Promoções</a>
+                            <a href="#">Kits</a>
+                            <a href="#">Feminino</a>
+                            <a href="#">Masculino</a>
+                            <a href="#">Infantil</a>
+                            <a href="#">Conjuntos</a>
+                            <a href="#">Perfumaria</a>
+                            <a href="#">Cabelos</a>
+                            <a href="#">Corpo e banho</a>
+                            <a href="#">Maquiagens</a>
+                            <a href="#">Skincare</a>
+                            <a href="#">Acessórios</a>
+                            <a href="#">Unhas</a>
+                            <a href="#">Casa</a>
+                        </div>
+                    </nav>
                 </li>
-                <li><a href="#" class="menu-link">Lançamentos</a></li>
-                <li><a href="#" class="menu-link">Presentes</a></li>
-                <li><a href="#" class="menu-link">Perfumaria</a></li>
-                <li><a href="#" class="menu-link">Skincare</a></li>
-                <li><a href="#" class="menu-link">Cabelos</a></li>
+                <li><a href="#" class="menu-link">Lançamentos</a>
+                </li>
+                <li class="dropdown-presentes"><a href="#" class="menu-link">Presentes</a>
+                    <nav>
+                        <div class="dropdown-content content-presentes">
+                            <a href="#">Presentes de Aniversário</a>
+                            <a href="#">Até 50 reais</a>
+                            <a href="#">Presentes para Casa</a>
+                            <a href="#">Até 100 reais</a>
+                            <a href="#">Chá de Bebê</a>
+                            <a href="#">Até 200 reais</a>
+                            <a href="#">Kits Femininos</a>
+                            <a href="#">Até 300 reais</a>
+                            <a href="#">Kits Masculinos</a>
+                        </div>
+                    </nav>
+                </li>   
+                <li class="dropdown-perfumaria"><a href="#" class="menu-link">Perfumaria</a>
+                    <nav>
+                        <div class="dropdown-content content-perfumaria">
+                            <a href="#">Lançamentos</a>
+                            <a href="#">Perfumes Femininos</a>
+                            <a href="#">Mais Vendidos</a>
+                            <a href="#">Perfumes Masculinos</a>
+                            <a href="#">Coleção Verão</a>
+                            <a href="#">Ver todos</a>
+                            <a href="#">Coleção Elegance</a>
+                        </div>
+                    </nav>
+                </li>
+                <li class="dropdown-skincare"><a href="#" class="menu-link">Skincare</a>
+                    <nav>
+                        <div class="dropdown-content content-skincare">
+                            <a href="#">Lançamentos</a>
+                            <a href="#">Sabonetes</a>
+                            <a href="#">Promoções</a>
+                            <a href="#">Cremes</a>
+                            <a href="#">Hidratantes</a>
+                            <a href="#">Máscaras</a>
+                            <a href="#">Esfoliantes</a>
+                            <a href="#">Ver todos</a>
+                        </div>
+                    </nav>
+                </li>
+                <li class="dropdown-cabelos"><a href="#" class="menu-link">Cabelos</a>
+                    <nav>
+                        <div class="dropdown-content content-cabelos">
+                            <a href="#">Promoções</a>
+                            <a href="#">Mais Vendidos</a>
+                            <a href="#">Shampoos</a>
+                            <a href="#">Condicionares</a>
+                            <a href="#">Kits</a>
+                            <a href="#">Máscaras</a>
+                            <a href="#">Cremes</a>
+                            <a href="#">Ver todos</a>
+                        </div>
+                    </nav>
+                </li>
             </ul>
         </nav>
         <span class="input-container">
@@ -70,8 +141,8 @@
     <div class="slider-container">
         <div id="my-keen-slider" class="keen-slider">
           <div class="keen-slider__slide number-slide1">
-            <div class="slide-banner1" bis_skin_checked="1">
-                <a class="slide-link1" href="#">1</a>
+            <div class="slide-banner" bis_skin_checked="1">
+                <a href="#">
                 <img alt="" height="" src="" width=""></a>
             </div>
           </div>
@@ -82,6 +153,245 @@
           <div class="keen-slider__slide number-slide6">6</div>
         </div>
       </div>
+    <div class="slider-title">
+        <h2>Promoção Mês do Consumidor com até 70% OFF</h2>
+    </div>
+    <div class="slider-products">
+        <div id="keen-slider-products" class="keen-slider">
+          <div class="keen-slider__slide product-slide1">
+            <div class="product-card">
+                <a href="#">
+                    <div class="product-img">
+                        <img src="./assets/perfume-blue.jpeg" alt="">
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="">Elegance Blue</a></h4>
+                        <span class="product-catagory">Coleção Elegance</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>R$110.90</small>R$89,90</div>
+                            <div class="product-links">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="product-btn">COMPRAR</button>
+                        </div>
+                    </div>
+                </a>
+              </div>
+          </div>
+          <div class="keen-slider__slide product-slide2">
+            <div class="product-card">
+                <a href="#">
+                    <div class="product-img">
+                        <img src="./assets/shampoo2.jpeg" alt="">
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="">Shampoo Silver</a></h4>
+                        <span class="product-catagory">Coleção Breeze</span>
+                        <div class="product-bottom-details">
+                            .<div class="product-price"><small>R$95.00</small>R$69,90</div>
+                            <div class="product-links">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="product-btn">COMPRAR</button>
+                        </div>
+                    </div>
+                </a>
+              </div>
+          </div>
+          <div class="keen-slider__slide product-slide3">
+            <div class="product-card">
+                <a href="#">
+                    <div class="product-img">
+                        <img src="./assets/maquiagem.jpeg" alt="">
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="">Palette Quattro</a></h4>
+                        <span class="product-catagory">Coleção MakeIt</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>R$55.00</small>R$45.00</div>
+                            <div class="product-links">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="product-btn">COMPRAR</button>
+                        </div>
+                    </div>
+                </a>
+              </div>
+          </div>
+          <div class="keen-slider__slide product-slide4">
+            <div class="product-card">
+                <a href="#">
+                    <div class="product-img">
+                        <img src="./assets/creme.jpeg" alt="">
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="">Creme Hidratante Fresh</a></h4>
+                        <span class="product-catagory">Coleção Summer</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>R$59,90</small>R$39,90</div>
+                            <div class="product-links">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="product-btn">COMPRAR</button>
+                        </div>
+                    </div>
+                </a>
+              </div>
+          </div>
+          <div class="keen-slider__slide product-slide5">
+            <div class="product-card">
+                <a href="#">
+                    <div class="product-img">
+                        <img src="./assets/shampoo1.jpeg" alt="">
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="">Shampoo Velvet</a></h4>
+                        <span class="product-catagory">Coleção Breeze</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>R$95.00</small>R$69,90</div>
+                            <div class="product-links">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="product-btn">COMPRAR</button>
+                        </div>
+                    </div>
+                </a>
+              </div>
+          </div>
+          <div class="keen-slider__slide product-slide6">
+            <div class="product-card">
+                <a href="#">
+                    <div class="product-img">
+                        <img src="./assets/batom.jpeg" alt="">
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="">Batom Red Wine</a></h4>
+                        <span class="product-catagory">Coleção MakeIt</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>R$66.00</small>R$29,90</div>
+                            <div class="product-links">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="product-btn">COMPRAR</button>
+                        </div>
+                    </div>
+                </a>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="perfume-banner">
+        <img src="./assets/perfume-banner.jpg" alt="" width="100%">
+    </div>
+    <div class="slider-title">
+        <h2>Conheça a mais nova Coleção Elegance</h2>
+    </div>
+    <div class="slider-products">
+        <div id="keen-slider-products2" class="keen-slider">
+          <div class="keen-slider__slide product-slide1">
+            <div class="product-card">
+                <a href="#">
+                    <div class="product-img">
+                        <img src="./assets/perfume-blue.jpeg" alt="">
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="">Elegance Blue</a></h4>
+                        <span class="product-catagory">Coleção Elegance</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>R$110.90</small>R$89,90</div>
+                            <div class="product-links">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="product-btn">COMPRAR</button>
+                        </div>
+                    </div>
+                </a>
+              </div>
+          </div>
+          <div class="keen-slider__slide product-slide2">
+            <div class="product-card">
+                <a href="#">
+                    <div class="product-img">
+                        <img src="./assets/perfume-red.jpeg" alt="">
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="">Elegance Red</a></h4>
+                        <span class="product-catagory">Coleção Elegance</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>R$110.90</small>R$89,90</div>
+                            <div class="product-links">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="product-btn">COMPRAR</button>
+                        </div>
+                    </div>
+                </a>
+              </div>
+          </div>
+          <div class="keen-slider__slide product-slide3">
+            <div class="product-card">
+                <a href="#">
+                    <div class="product-img">
+                        <img src="./assets/perfume-purple.jpeg" alt="">
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="">Elegance Purple</a></h4>
+                        <span class="product-catagory">Coleção Elegance</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>R$110.90</small>R$89,90</div>
+                            <div class="product-links">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="product-btn">COMPRAR</button>
+                        </div>
+                    </div>
+                </a>
+              </div>
+          </div>
+          <div class="keen-slider__slide product-slide4">
+            <div class="product-card">
+                <a href="#">
+                    <div class="product-img">
+                        <img src="./assets/perfume-pink.jpeg" alt="">
+                    </div>
+                    <div class="product-details">
+                        <h4><a href="">Elegance Pink</a></h4>
+                        <span class="product-catagory">Coleção Elegance</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>R$110.90</small>R$89,90</div>
+                            <div class="product-links">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="product-btn">COMPRAR</button>
+                        </div>
+                    </div>
+                </a>
+              </div>
+          </div>
+        </div>
+    </div>
+
+    </div>
       <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
       <script src="./script.js"></script>
 </body>

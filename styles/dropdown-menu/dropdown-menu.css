@@ -1,0 +1,82 @@
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 26px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border: solid 1px gray;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  width: 212px;
+  border-right: solid 1px gray;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-categories:hover .content-categories {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  width: 426px;
+}
+
+.dropdown-presentes:hover .content-presentes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  width: 426px;
+}
+
+.dropdown-perfumaria:hover .content-perfumaria {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  width: 426px;
+}
+
+.dropdown-skincare:hover .content-skincare   {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  width: 426px;
+}
+
+.dropdown-cabelos:hover .content-cabelos   {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  width: 200px;
+}
+
+
+.dropdown-categories:hover .menu-link,
+.dropdown-categories:hover .menu-link:hover,
+.dropdown-presentes:hover .menu-link,
+.dropdown-presentes:hover .menu-link:hover,
+.dropdown-perfumaria:hover .menu-link,
+.dropdown-perfumaria:hover .menu-link:hover,
+.dropdown-skincare:hover .menu-link,
+.dropdown-skincare:hover .menu-link:hover,
+.dropdown-cabelos:hover .menu-link,
+.dropdown-cabelos:hover .menu-link:hover
+{
+    color: black;
+    font-weight: 500;
+    border-bottom: 3px solid var(--primary-color);
+}
