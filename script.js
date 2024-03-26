@@ -11,6 +11,14 @@ function banner_slider(slider) {
   function nextTimeout() {
     clearTimeout(timeout)
     if (mouseOver) return
+    if (slider.track.details.rel === slider.track.details.slides.length - 1) {
+      timeout = setTimeout(() => {
+        slider.moveToIdx(0)
+      }, 2000)
+    }
+    else {
+      
+    }
     timeout = setTimeout(() => {
       slider.next()
     }, 2000)
@@ -119,6 +127,11 @@ function banner_slider(slider) {
   slider.on("animationEnded", nextTimeout)
   slider.on("updated", nextTimeout)   
 }
+
+
+
+
+
 
 
 function navigation(slider) {
