@@ -1,0 +1,111 @@
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.search {
+    width: 40em;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 1px solid #9b9b9b;
+    border-right: none;
+    padding: 10px;
+    height: 1.5em;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+    font-size: 1.5em;
+  }
+  
+  .searchTerm:focus{
+    color: #777777;
+  }
+  
+  .searchButton {
+    width: 4em;
+    height: 2.9em;
+    border: 1px solid var(--primary-color);
+    background: var(--primary-color);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .search-field{
+    width: 30em;
+    position: relative;
+  }
+
+  .search-field-min {
+    display: none;
+  }
+
+  @media screen and (max-width: 1368px) {
+    .search {
+      width: 30em;
+    }
+    .search-field{
+      width: 90%;
+      position: relative;
+    } 
+  }
+
+  @media screen and (max-width: 820px) {
+    .search-field-max {
+      display: none;
+    }
+    .search-field-min {
+      display: flex;
+    }
+
+    .search {
+      width: 100%;
+      justify-content: center;
+    }  
+
+    .search-field{
+      width: 95%;
+      position: relative;
+    } 
+  }
+
+
+  @media screen and (max-width: 480px) {
+    .searchTerm {
+      font-size: 1em;
+    }
+
+    .searchButton {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .searchTerm {
+      font-size: 0.9em;
+    }
+
+    .searchButton {
+      font-size: 0.9em;
+    }
+    
+    .search-field{
+      width: 85%;
+      position: relative;
+    } 
+  }
+
+  @media screen and (max-width: 280px) {
+    .main-logo {
+        margin: 0 0 0 4em;
+        width: 55%;
+    }
+}

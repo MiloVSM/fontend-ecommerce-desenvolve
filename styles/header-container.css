@@ -1,0 +1,144 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5em 0em;
+    margin: 0em 4em;
+    align-items: center;
+    z-index: 2;
+}
+
+.hamburguer {
+    display: none;
+}
+
+.main-logo {
+    margin: 0 0 5px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 5em;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3em;
+}
+
+.header-icons a {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    text-decoration: none;
+}
+
+.login-description {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: rgb(118, 118, 118);
+}
+
+.login__text {
+    font-weight:600;
+}
+
+@media screen and (max-width: 1366px) {
+    .login-description {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    .header-container {
+        margin: 0 2em;
+    }
+
+    .header-icons {
+        gap: 2em;
+    }
+
+    .login-description {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 820px) {
+
+    .header-container {
+        margin: 0 1em;
+        padding: 3em 0;
+    }
+
+    .main-logo {
+        margin: 0 0 0 5em;
+        width: 65%;
+    }
+    
+    .header-icons {
+        gap: 1.5em;
+    }
+
+    .hamburguer {
+        display: flex;
+    }
+
+    .user-icon {
+        display: none;
+    }
+
+    .container__image {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .header-container {
+        margin: 0 1em;
+        padding: 2em 0;
+    }
+
+    .main-logo {
+        margin: 0 0 0 4em;
+        width: 60%;
+    }
+    
+    .header-icons {
+        gap: 1em;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .header-container {
+        margin: 0 1em;
+        padding: 0.5em 0;
+    }
+
+    .main-logo {
+        margin: 0 0 0 6em;
+        width: 55%;
+    }
+    
+    .header-icons {
+        gap: 1em;
+    }
+
+    .container__image-fav, .cart-icon {
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .main-logo {
+        margin: 0 0 0 4em;
+        width: 55%;
+    }
+}

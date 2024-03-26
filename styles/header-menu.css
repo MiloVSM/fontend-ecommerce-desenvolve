@@ -1,0 +1,48 @@
+.header-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    gap: 5em;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    font-weight:300;
+    padding: 1em 0;
+}
+
+.menu-link:hover {
+    color: black;
+    font-weight: 500;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+a:visited { 
+    text-decoration: none; 
+    color: inherit;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .menu-items {
+        gap: 2em;
+    }
+
+    .menu-link {
+        font-size: 1.3;
+    }
+  }
+
+  @media screen and (max-width: 915px) {
+    .header-menu {
+        display: none;
+    }
+  }
