@@ -63,16 +63,13 @@ function sliderConfig(slider) {
       }
     }
 
-    function checkDots() {
-      if (window.matchMedia('(max-width: 800px)').matches) {
-        removeDot(0);
-      } else if (window.matchMedia('(max-width: 1023px)').matches) {
-        removeDot(1);
-      } else {
-        removeDot(2);
-      }
+    if (window.matchMedia('(max-width: 800px)').matches) {
+       removeDot(0);
+    } else if (window.matchMedia('(max-width: 1023px)').matches) {
+      removeDot(1);
+    } else {
+      removeDot(2);
     }
-    checkDots();
     wrapper.appendChild(dots)
   }
 
