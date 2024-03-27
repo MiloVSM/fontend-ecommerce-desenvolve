@@ -17,11 +17,10 @@ function sliderConfig(slider) {
         }, 2000)
       }
       else {
-        
+        timeout = setTimeout(() => {
+          slider.next()
+        }, 2000)
       }
-      timeout = setTimeout(() => {
-        slider.next()
-      }, 2000)
     }
   
     function markup(remove) {

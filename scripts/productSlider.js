@@ -4,6 +4,7 @@ function sliderConfig(slider) {
   function markup(remove) {
     wrapperMarkup(remove)
     arrowMarkup(remove)
+    dotMarkup(remove)
   }
 
   function removeElement(elment) {
@@ -44,6 +45,36 @@ function sliderConfig(slider) {
     wrapper.appendChild(slider.container)
   }
 
+  function dotMarkup(remove) {
+    if (remove) {
+      removeElement(dots)
+      return
+    }
+    dots = createDiv("dots")
+    slider.track.details.slides.forEach((_e, idx) => {
+      var dot = createDiv("dot")
+      dot.addEventListener("click", () => slider.moveToIdx(idx))
+      dots.appendChild(dot)
+    })
+    
+    function removeDot(n_dots) {
+      for (i = 0; i < n_dots; i++) {
+        dots.removeChild(dots.lastChild);
+      }
+    }
+
+    function checkDots() {
+      if (window.matchMedia('(max-width: 800px)').matches) {
+        removeDot(0);
+      } else if (window.matchMedia('(max-width: 1023px)').matches) {
+        removeDot(1);
+      } else {
+        removeDot(2);
+      }
+    }
+    checkDots();
+    wrapper.appendChild(dots)
+  }
 
   function updateClasses() {
     var slide = slider.track.details.rel
@@ -53,11 +84,22 @@ function sliderConfig(slider) {
     slide === slider.track.details.slides.length - 1
       ? arrowRight.classList.add("arrow--disabled")
       : arrowRight.classList.remove("arrow--disabled")
+    Array.from(dots.children).forEach(function (dot, idx) {
+      idx === slide
+        ? dot.classList.add("dot--active")
+        : dot.classList.remove("dot--active")
+    })
   }
+
 
   slider.on("created", () => {
     markup()
     updateClasses()
+    window.addEventListener('resize', () => {
+      try {
+        markup(true)
+      } catch(err) {}
+    });
   })
   slider.on("optionsChanged", () => {
     console.log(2)
@@ -74,8 +116,6 @@ function sliderConfig(slider) {
 
 }
 
-
-
 let slidesPerView = 3;
 
 function updateSlidesPerView() {
@@ -91,15 +131,16 @@ function updateSlidesPerView() {
   }
 }
 
+let slider1;
+let slider2;
+
 function createSliders(slidesPerView) {
-  var slider = new KeenSlider("#keen-slider-products", { slides: { perView: slidesPerView } }, [sliderConfig])
-  var slider = new KeenSlider("#keen-slider-products2", { slides: { perView: slidesPerView }}, [sliderConfig])
+  slider1 = new KeenSlider("#keen-slider-products", { slides: { perView: slidesPerView } }, [sliderConfig])
+  slider2 = new KeenSlider("#keen-slider-products2", { slides: { perView: slidesPerView }}, [sliderConfig])
 }
 
-// Initial setup
 updateSlidesPerView();
 
-// Add event listener for window resize
 window.addEventListener('resize', updateSlidesPerView);
 window.addEventListener('fullscreenchange', updateSlidesPerView);
 
