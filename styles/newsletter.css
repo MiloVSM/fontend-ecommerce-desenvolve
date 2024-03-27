@@ -1,12 +1,13 @@
 .newsletter {
     background-color: var(--white);
     padding: 1em;
-    border-top: solid 1px rgb(210, 210, 210);
 }
 
-.newsletter__title, 
-.newsletter__text {
+.newsletter__title {
     color: black;
+}
+.newsletter__text {
+    color: rgb(43, 43, 43);
 }
 
 .newsletter__title {
