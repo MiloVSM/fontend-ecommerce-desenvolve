@@ -53,7 +53,6 @@ function sliderConfig(slider) {
     dots = createDiv("dots")
     slider.track.details.slides.forEach((_e, idx) => {
       var dot = createDiv("dot")
-      dot.addEventListener("click", () => slider.moveToIdx(idx))
       dots.appendChild(dot)
     })
     
