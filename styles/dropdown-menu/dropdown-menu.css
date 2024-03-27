@@ -80,3 +80,23 @@
     font-weight: 500;
     border-bottom: 3px solid var(--primary-color);
 }
+
+@media screen and (max-width: 1024px) {
+
+  .dropdown-perfumaria:hover .content-perfumaria   {
+    width: 400px;
+  }
+
+  .content-perfumaria a {
+    width: 199px;
+  }
+
+  .dropdown-skincare:hover .content-skincare   {
+    width: 0px;
+  }
+  
+  .dropdown-cabelos:hover .content-cabelos   {
+    width: 0px;
+  }
+
+}
