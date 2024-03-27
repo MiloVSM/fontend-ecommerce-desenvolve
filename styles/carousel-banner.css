@@ -1,5 +1,5 @@
 .slider-container {
-    margin: 1.64em 0;
+    margin: 25px 0;
     font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -16,6 +16,10 @@
 }
 
 
+.banner-image {
+  width: 100vw;
+}
+
   [class^="number-slide"],
   [class*=" number-slide"]{
     background: grey;
@@ -25,9 +29,8 @@
     font-size: 50px;
     color: #fff;
     font-weight: 500;
-    height: 500px;
+    height: 32vw;
     max-height: 100vh;
-    min-width: 270px;
   }
   
   .navigation-wrapper {
@@ -92,4 +95,6 @@
   .arrow--disabled.arrow--right {
     background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' fill='grey' viewBox='0 0 24 24' %3E%3Cpath d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z'%3E%3C/path%3E%3C/svg%3E");
   }
+  
+
   
