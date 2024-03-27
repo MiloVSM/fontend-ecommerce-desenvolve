@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/cosmetix-white-icon.png" type="image/x-icon"> 
-    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"/>
     <title>Cosmetix</title>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <div class="hamburguer">
+            <div class="hamburguer menu-btn">
                 <img src="./assets/Menu.svg" alt="" class="hamburguer container__image">
             </div>
             <div class="header-content">
@@ -139,6 +135,42 @@
              </div>
         </span>
     </header>
+    <div class="sidebar">
+        <div class="close-btn-wrapper">
+            <i class="fas fa-times close-btn"></i>
+        </div>
+        <div class="sidebar-login-wrapper">
+            <a href="">
+                <div class="sidebar-login">
+                    <img src="./assets/default-user.jpeg" alt="">
+                    <p>Faça login ou cadastre-se!</p>
+                </div>
+            </a>
+        </div>
+        <nav class="sidebar-menu">
+            <nav class="item"><a href="">Lançamentos</a></nav>
+            <nav class="item"><a class="sub-btn">Promoções<i class="fas fa-angle-down dropdown"></i></a>
+                <div class="sub-menu">
+                    <a href="#" class="sub-item">MÊS DO CONSUMIDOR</a>
+                    <a href="#" class="sub-item">CUPONS DE DESCONTO</a>
+                </div>  
+            </nav>
+            <nav class="item"><a href="">Coleções</a></nav>
+            <nav class="item"><a href="">Presentes</a></nav>
+            <nav class="item"><a href="">Perfumaria</a></nav>
+            <nav class="item"><a href="">Skincare</a></nav>
+            <nav class="item"><a href="">Cabelos</a></nav>
+            <nav class="item"><a href="">Maquiagem</a></nav>
+            <nav class="item"><a href="">Acessórios</a></nav>
+            <nav class="item"><a href="">Infantil</a></nav>
+            <nav class="item"><a href="">Casa</a></nav>
+            <nav class="item"><a href="">Kits</a></nav>
+            <nav class="item"><a href="">Lista de Desejos</a></nav>
+            <nav class="item"><a href="">Meus Pedidos</a></nav>
+            <nav class="item"><a href="">Atendimento</a></nav>
+            <nav class="item"><a href="">Sair</a></nav>
+        </nav>
+    </div>
     <div class="slider-container">
         <div id="my-keen-slider" class="keen-slider">
           <div class="keen-slider__slide number-slide1">
@@ -415,7 +447,7 @@
         <input type="email" placeholder="Cadastre seu e-mail" class="newsletter__email">
     </section>
     <footer class="footer">
-        <h2 class="footer__title"><img src="./assets/cosmetix-whitelogo.svg" alt="" class="footer-logo"></h2>
+        <div class="footer__title"><img src="./assets/cosmetix-whitelogo.svg" alt="" class="footer-logo"></div>
         <ul class="footer-list">
             <li class="footer-list__title">A Cosmetix</li>
             <li class="footer-list__item">
@@ -467,7 +499,8 @@
     </footer>
     </div>
       <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
-      <script src="./scripts/banner-slider.js"></script>
-      <script src="./script.js"></script>
+      <script src="./scripts/bannerSlider.js"></script>
+      <script src="./scripts/productSlider.js"></script>
+      <script src="./scripts/sidebar.js"></script>
 </body>
 </html>

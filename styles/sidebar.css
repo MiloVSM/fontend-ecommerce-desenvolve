@@ -1,0 +1,113 @@
+.menu-btn{
+    cursor: pointer;
+}
+
+.close-btn-wrapper {
+    display: flex;
+    justify-content: right;
+    padding: 10px 15px 0 0;
+    color: rgb(91, 91, 91);
+    font-size: 32px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: black;
+    width: 100%;
+}
+
+.close-btn, .close-btn::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 2px 3px 15px rgb(63, 63, 63);
+}
+
+
+.sidebar {
+    background: #ffffff;
+    width: 300px;
+    left: -300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property: left;
+    z-index: 3;
+}
+
+.sidebar.active {
+    left: 0;
+    box-shadow: 3px 0px 100px rgb(0, 0, 0);
+}
+
+.sidebar-login-wrapper a, .sidebar-login-wrapper a:visited {
+    text-decoration: none;
+    color: black;
+}
+.sidebar-login {
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: black;
+}
+
+.sidebar-login img {
+    width: 40px;
+    margin: 5px 10px 5px 5px;
+    border-radius: 50%;
+    border: solid 3px rgb(226, 89, 89);
+}
+
+.sidebar-menu {
+    width: 100%;
+}
+
+.sidebar-menu .item {
+    position: relative;
+    cursor: pointer;
+}
+
+.sidebar-menu a {
+    color: black;
+    font-size: 1em;
+    text-decoration: none;
+    display: block;
+    padding: 18px 10px;
+    border-top: solid 1px lightgray;
+}
+
+.sub-menu {
+    display: block;
+    background: rgb(227, 227, 227);
+  }
+
+.sub-menu:active {
+    display: block;
+}
+  
+.sub-menu a {
+    color: #f91b65;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.item a .dropdown {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    transition: 0.3s ease;
+}
+
+
+
+.rotate {
+    rotate: 180deg;
+    top: 0px;
+}

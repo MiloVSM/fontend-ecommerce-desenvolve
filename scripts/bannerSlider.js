@@ -1,4 +1,4 @@
-function banner_slider(slider) {
+function sliderConfig(slider) {
     let wrapper, dots, arrowLeft, arrowRight
   
     let timeout
@@ -130,4 +130,4 @@ function banner_slider(slider) {
   }
   
 
-  var slider = new KeenSlider("#my-keen-slider", {}, [banner_slider])
+  var slider = new KeenSlider("#my-keen-slider", {}, [sliderConfig])

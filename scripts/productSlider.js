@@ -1,4 +1,4 @@
-function navigation(slider) {
+function sliderConfig(slider) {
   let wrapper, dots, arrowLeft, arrowRight
 
   function markup(remove) {
@@ -92,8 +92,8 @@ function updateSlidesPerView() {
 }
 
 function createSliders(slidesPerView) {
-  var slider = new KeenSlider("#keen-slider-products", { slides: { perView: slidesPerView } }, [navigation])
-  var slider = new KeenSlider("#keen-slider-products2", { slides: { perView: slidesPerView }}, [navigation])
+  var slider = new KeenSlider("#keen-slider-products", { slides: { perView: slidesPerView } }, [sliderConfig])
+  var slider = new KeenSlider("#keen-slider-products2", { slides: { perView: slidesPerView }}, [sliderConfig])
 }
 
 // Initial setup
