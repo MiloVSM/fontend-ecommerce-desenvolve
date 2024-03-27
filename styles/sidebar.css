@@ -83,7 +83,7 @@
 }
 
 .sub-menu {
-    display: block;
+    display: none;
     background: rgb(227, 227, 227);
   }
 
