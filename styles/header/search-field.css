@@ -83,12 +83,20 @@
       font-size: 1em;
     }
 
+    .searchTerm {
+      padding: 22px;
+    }
+
     .searchButton {
       font-size: 16px;
     }
   }
 
   @media screen and (max-width: 320px) {
+    .searchTerm {
+      padding: 20px;
+    }
+
     .searchTerm {
       font-size: 0.9em;
     }
