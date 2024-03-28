@@ -58,7 +58,7 @@
     } 
   }
 
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 905px) {
     .search-field-max {
       display: none;
     }
@@ -110,10 +110,3 @@
       position: relative;
     } 
   }
-
-  @media screen and (max-width: 280px) {
-    .main-logo {
-        margin: 0 0 0 4em;
-        width: 55%;
-    }
-}

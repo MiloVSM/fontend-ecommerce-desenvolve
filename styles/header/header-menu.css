@@ -42,7 +42,7 @@ menu-items a:visited {
     }
   }
 
-  @media screen and (max-width: 915px) {
+  @media screen and (max-width: 1023px) {
     .header-menu {
         display: none;
     }
