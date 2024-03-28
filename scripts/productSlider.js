@@ -8,7 +8,9 @@ function sliderConfig(slider) {
   }
 
   function removeElement(elment) {
-    elment.parentNode.removeChild(elment)
+    if (elment.parentNode) {
+      elment.parentNode.removeChild(elment)
+    }
   }
   function createDiv(className) {
     var div = document.createElement("div")
@@ -92,9 +94,7 @@ function sliderConfig(slider) {
     markup()
     updateClasses()
     window.addEventListener('resize', () => {
-      try {
-        markup(true)
-      } catch(err) {}
+      markup(true)
     });
   })
   slider.on("optionsChanged", () => {
