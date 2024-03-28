@@ -1,17 +1,21 @@
 function sliderConfig(slider) {
   let wrapper, dots, arrowLeft, arrowRight
 
+  // Adiciona elementos de navegação
   function markup(remove) {
     wrapperMarkup(remove)
     arrowMarkup(remove)
     dotMarkup(remove)
   }
 
+  // Remove um elemento do HTML
   function removeElement(elment) {
     if (elment.parentNode) {
       elment.parentNode.removeChild(elment)
     }
   }
+
+  // Cria os elementos HTML
   function createDiv(className) {
     var div = document.createElement("div")
     var classNames = className.split(" ")
@@ -19,6 +23,7 @@ function sliderConfig(slider) {
     return div
   }
 
+  // Adiciona setas de navegação
   function arrowMarkup(remove) {
     if (remove) {
       removeElement(arrowLeft)
@@ -34,6 +39,7 @@ function sliderConfig(slider) {
     wrapper.appendChild(arrowRight)
   }
 
+  // Adiciona o container de navegação
   function wrapperMarkup(remove) {
     if (remove) {
       var parent = wrapper.parentNode
@@ -47,6 +53,7 @@ function sliderConfig(slider) {
     wrapper.appendChild(slider.container)
   }
 
+  // Adiciona os pontos de navegação
   function dotMarkup(remove) {
     if (remove) {
       removeElement(dots)
@@ -74,6 +81,8 @@ function sliderConfig(slider) {
     wrapper.appendChild(dots)
   }
 
+
+  // Atualiza as classes
   function updateClasses() {
     var slide = slider.track.details.rel
     slide === 0
@@ -89,13 +98,10 @@ function sliderConfig(slider) {
     })
   }
 
-
+  // Configuração inicial e atualização do slide
   slider.on("created", () => {
     markup()
     updateClasses()
-    window.addEventListener('resize', () => {
-      markup(true)
-    });
   })
   slider.on("optionsChanged", () => {
     console.log(2)
@@ -112,32 +118,37 @@ function sliderConfig(slider) {
 
 }
 
-let slidesPerView = 3;
-
+// Atualiza a quantidade de slides por vez na tela
 function updateSlidesPerView() {
+  let slidesPerView = 3;
+
   if (window.matchMedia('(max-width: 800px)').matches) {
     slidesPerView = 1;
-    createSliders(slidesPerView);
   } else if (window.matchMedia('(max-width: 1023px)').matches) {
     slidesPerView = 2;
-    createSliders(slidesPerView);
-  } else {
-    slidesPerView = 3;
-    createSliders(slidesPerView);
   }
+
+  createSliders(slidesPerView);
 }
 
 let slider1;
 let slider2;
 
+// Cria os sliders
 function createSliders(slidesPerView) {
-  slider1 = new KeenSlider("#keen-slider-products", { slides: { perView: slidesPerView } }, [sliderConfig])
-  slider2 = new KeenSlider("#keen-slider-products2", { slides: { perView: slidesPerView }}, [sliderConfig])
+  if (slider1) {
+    slider1.destroy();
+  }
+  if (slider2) {
+    slider2.destroy();
+  }
+
+  slider1 = new KeenSlider("#keen-slider-products", { slides: { perView: slidesPerView } }, [sliderConfig]);
+  slider2 = new KeenSlider("#keen-slider-products2", { slides: { perView: slidesPerView }}, [sliderConfig]);
 }
 
+// Atualização inicial
 updateSlidesPerView();
 
+// Atualiza os sliders sempre que a resolução é alterada
 window.addEventListener('resize', updateSlidesPerView);
-window.addEventListener('fullscreenchange', updateSlidesPerView);
-
-
